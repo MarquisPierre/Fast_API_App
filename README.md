@@ -62,6 +62,7 @@ fastapi-app/
 │   └── item.py
 └── tests/
     └── test_main.py
+```
 Through this project, I strengthened my skills in:
 
 Building REST APIs using FastAPI and Python
