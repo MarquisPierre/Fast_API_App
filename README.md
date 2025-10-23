@@ -1,20 +1,17 @@
-# 🚀 FastAPI Application
+# 🧠 FastAPI To-Do API
 
-### A modern, high-performance REST API built with **FastAPI** and **Python**
+### A lightweight REST API built with **FastAPI** and **Python** for creating and managing simple items.
 
-This project demonstrates how to design and deploy a scalable backend API using **FastAPI**, one of the fastest Python web frameworks available.  
-It includes clean routing, modular code organization, and best practices for asynchronous operations.
+This project demonstrates the fundamentals of building and structuring a backend API with **FastAPI** — including request models, routing, and error handling — all in an elegant and high-performance Python framework.
 
 ---
 
-## 🧩 Features
-- ⚡ **FastAPI** framework for ultra-fast performance  
-- 🧠 **Asynchronous endpoints** for handling concurrent requests efficiently  
-- 🗃️ **CRUD operations** for creating, reading, updating, and deleting data  
-- 🧾 **Automatic documentation** with **Swagger UI** and **ReDoc**  
-- 🔐 **Environment-based configuration** using `.env` variables  
-- 🧪 **Built-in testing setup** with `pytest`  
-- ☁️ **Easily deployable** to platforms like **Vercel**, **Render**, or **Railway**
+## 🚀 Features
+- ⚡ Built with **FastAPI** — one of the fastest Python web frameworks available  
+- 🧱 **CRUD-style endpoints** for creating and retrieving items  
+- 🧾 **Automatic API documentation** via **Swagger UI** and **ReDoc**  
+- 💡 Demonstrates clean use of **Pydantic models** for data validation  
+- 🧠 Ideal starter project for understanding FastAPI fundamentals
 
 ---
 
@@ -24,10 +21,10 @@ It includes clean routing, modular code organization, and best practices for asy
 |-----------|------------|
 | **Framework** | FastAPI |
 | **Language** | Python 3.10+ |
-| **Database** | SQLite / PostgreSQL (depending on deployment) |
 | **Server** | Uvicorn |
-| **Deployment** | Vercel / Render / Docker |
+| **Data Handling** | Pydantic models & in-memory list |
 | **Version Control** | Git & GitHub |
+| **Deployment (optional)** | Vercel / Render / Railway |
 
 ---
 
@@ -35,40 +32,60 @@ It includes clean routing, modular code organization, and best practices for asy
 
 ```bash
 # 1️⃣ Clone the repository
-git clone https://github.com/MarquisPierre/<YOUR_REPO_NAME>.git
-cd <YOUR_REPO_NAME>
+git clone https://github.com/MarquisPierre/Fast_API_App.git
+cd Fast_API_App
 
 # 2️⃣ Create and activate a virtual environment
 python -m venv venv
-source venv/bin/activate      # For Mac/Linux
-venv\Scripts\activate         # For Windows
+source venv/bin/activate      # Mac/Linux
+venv\Scripts\activate         # Windows
 
 # 3️⃣ Install dependencies
-pip install -r requirements.txt
+pip install fastapi uvicorn pydantic
 
-# 4️⃣ Run the FastAPI app
+# 4️⃣ Run the FastAPI server
 uvicorn main:app --reload
-fastapi-app/
+```
+📡 API Endpoints
+| Method   | Endpoint           | Description                                  |
+| -------- | ------------------ | -------------------------------------------- |
+| **GET**  | `/`                | Returns a simple “Hello World” message       |
+| **POST** | `/items`           | Adds a new item (requires JSON body)         |
+| **GET**  | `/items`           | Returns a list of items (default limit = 10) |
+| **GET**  | `/items/{item_id}` | Returns a specific item by its ID            |
+
+
+```bash 
+{
+  "text": "Buy groceries",
+  "is_done": false
+}
+
+```
+
+📁 Project Structure
+
+
+```
+fastapi-todo/
 │
 ├── main.py
 ├── requirements.txt
-├── .env.example
-├── routers/
-│   ├── users.py
-│   ├── items.py
-│   └── __init__.py
-├── models/
-│   ├── user.py
-│   └── item.py
-└── tests/
-    └── test_main.py
+└── README.md
 ```
-Through this project, I strengthened my skills in:
+🧠 What I Learned
 
-Building REST APIs using FastAPI and Python
+Through this project, I gained hands-on experience with:
 
-Writing clean, modular, and asynchronous code
+Building REST APIs using FastAPI
 
-Structuring backend projects for scalability
+Structuring endpoints and using Pydantic models for validation
 
-Handling environment configuration securely
+Managing data in-memory and handling HTTP exceptions
+
+Creating self-documenting APIs with Swagger UI
+
+Running and testing FastAPI apps locally with Uvicorn
+
+
+
