@@ -54,8 +54,8 @@ uvicorn main:app --reload
 | **GET**  | `/items`           | Returns a list of items (default limit = 10) |
 | **GET**  | `/items/{item_id}` | Returns a specific item by its ID            |
 
-
-```bash 
+Example JSON body for POST /items
+```
 {
   "text": "Buy groceries",
   "is_done": false
