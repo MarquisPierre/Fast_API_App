@@ -24,7 +24,7 @@ This project demonstrates the fundamentals of building and structuring a backend
 | **Server** | Uvicorn |
 | **Data Handling** | Pydantic models & in-memory list |
 | **Version Control** | Git & GitHub |
-| **Deployment (optional)** | Vercel / Render / Railway |
+
 
 ---
 
