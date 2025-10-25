@@ -1,4 +1,4 @@
-# 🧠 FastAPI To-Do API
+# 🧠 FastAPI To-Do-List App
 
 ### A lightweight REST API built with **FastAPI** and **Python** for creating and managing simple items.
 
